@@ -41,7 +41,7 @@ def createStimulus(est, fs):
     elif est['type'] == 'FMsweep':
         sound = createFMsweep(est, fs)
     else:
-        print 'WARNING: Stimulus type not recognised, using a pure tone...'
+        print('WARNING: Stimulus type not recognised, using a pure tone...')
         sound = createPureTone(est, fs)
 
     if est['filename'] == -1:
@@ -241,7 +241,7 @@ def computeNoteFreq(f0, note, tuning):
     else:
         r = 2. ** ((1. * note) / 12)
         if tuning != 'equal':
-            print 'Warning: intonation not recognised, using equal tempered'
+            print('Warning: intonation not recognised, using equal temperament')
    
     f1 = r * f0
 

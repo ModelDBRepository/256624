@@ -112,7 +112,7 @@ def subcortical(prob, lagSpace, par):
         
         if (par['SACFGround'] < 0):
             if (len(prob) * dt < 0.075):
-                print 'Warning: dur(stim) < 75ms; Using default baseline 0.5'
+                print('Warning: dur(stim) < 75ms; Using default baseline 0.5')
                 k0 = 0.5
             else:
                 k0 = np.mean(k[int(0.05/dt) : int(min(0.10/dt, len(prob)))])            
